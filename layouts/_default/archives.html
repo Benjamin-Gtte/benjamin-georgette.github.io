@@ -1,0 +1,51 @@
+{{- define "main" }}
+
+<header class="page-header">
+</header>
+
+{{- $pages := where site.RegularPages "Type" "in" site.Params.mainSections }}
+{{- if site.Params.ShowAllPagesInArchive }}
+  {{- $pages = site.RegularPages }}
+{{- end }}
+
+{{- range $pages.GroupByPublishDate "2006" }}
+  {{- if ne .Key "0001" }}
+    <div class="archive-year">
+      {{- $year := replace .Key "0001" "" }}
+      <h2 class="archive-year-header" id="{{ $year }}">
+        <a class="archive-header-link" href="#{{ $year }}">{{- $year -}}</a>
+      </h2>
+
+      {{- $grouped := .Pages.GroupByParam "category" }}
+      {{- range sort $grouped "Key" "desc" }}
+
+        <div class="archive-section">
+          <h3 class="archive-section-header">{{ .Key }}</h3> <!-- Affichage de la catégorie -->
+          
+          {{- range .Pages.GroupByDate "January" }}
+            <div class="archive-month">
+              <h3 class="archive-month-header" id="{{ $year }}-{{ .Key }}">
+                <a class="archive-header-link" href="#{{ $year }}-{{ .Key }}">
+                  {{- .Key -}}
+                </a>
+              </h3>
+              <div class="archive-posts">
+                {{- range .Pages }}
+                  {{- if eq .Kind "page" }}
+                    <div class="archive-entry">
+                      <h4 class="archive-entry-title entry-hint-parent">
+                        <a href="{{ .Permalink }}">{{ .Title | markdownify }}</a>
+                      </h4>
+                    </div>
+                  {{- end }}
+                {{- end }}
+              </div>
+            </div>
+          {{- end }}
+        </div>
+      {{- end }}
+    </div>
+  {{- end }}
+{{- end }}
+
+{{- end }}

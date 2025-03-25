@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>A new stability analysis of the central difference method for transient dynamics viscoelastic problems | Benjamin Georgette</title>
+<meta name="keywords" content="Central difference method, Stability analysis, Variable time step, Viscoelasticity, Transient dynamics">
+<meta name="description" content="This paper is a presentation made for the ENOC2024 scientific conference.">
+<meta name="author" content="Benjamin Georgette,&thinsp;David Dureisseix,&thinsp;Anthony Gravouil">
+<link rel="canonical" href="http://localhost:1313/communications/2024-enoc/2024-enoc/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.4805999618f8e5e64abd7e8f87c309bbdd604fe70413a6eba251b560263dee27.css" integrity="sha256-SAWZlhj45eZKvX6Ph8MJu91gT&#43;cEE6brolG1YCY97ic=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/communications/2024-enoc/2024-enoc/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+</noscript><meta property="og:title" content="A new stability analysis of the central difference method for transient dynamics viscoelastic problems" />
+<meta property="og:description" content="This paper is a presentation made for the ENOC2024 scientific conference." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/communications/2024-enoc/2024-enoc/" /><meta property="article:section" content="communications" />
+<meta property="article:published_time" content="2024-07-22T00:00:00+00:00" />
+<meta property="article:modified_time" content="2024-07-22T00:00:00+00:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="A new stability analysis of the central difference method for transient dynamics viscoelastic problems"/>
+<meta name="twitter:description" content="This paper is a presentation made for the ENOC2024 scientific conference."/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Communications",
+      "item": "http://localhost:1313/communications/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "A new stability analysis of the central difference method for transient dynamics viscoelastic problems",
+      "item": "http://localhost:1313/communications/2024-enoc/2024-enoc/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "A new stability analysis of the central difference method for transient dynamics viscoelastic problems",
+  "name": "A new stability analysis of the central difference method for transient dynamics viscoelastic problems",
+  "description": "This paper is a presentation made for the ENOC2024 scientific conference.",
+  "keywords": [
+    "Central difference method", "Stability analysis", "Variable time step", "Viscoelasticity", "Transient dynamics"
+  ],
+  "articleBody": "Download the submitted abstract, or the presentation slides.\nAbstract We develop a new explicit integration method for transient dynamics computation of viscoelastic materials, surpassing the stability limits of Belytschko’s widely used half-lagged velocity approximation. Based on the central difference (CD) scheme, our method integrates the viscous stress strain law, while keeping an explicit scheme. Moreover, we provide a new stability analysis of the variable time step central difference method. We prove that CD’s stability can be ensured only thanks to the zero-stability criteria, based on the multistep formulation of the method. We perform analytical developments on a single degree of freedom problem. Thus, we show that, without viscous damping, ensuring stability requires to decrease, or at least to maintain constant the time step during the time integration. Furthermore, we prove that, with viscous damping, there exists a slight possibility of increasing the time step during the time integration.\nMain results Constant time step\nNew integration method for the viscous stress-strain relationship with great stability properties. $$(1-\\alpha)\\mathbf{\\sigma}^{\\text{v}}{n} + \\alpha^{\\text{v}}_{n+1} = \\eta\\mathbb{I}:\\mathbf{\\varepsilon}(\\mathbf{v}_{n+1/2}),\\qquad\\alpha\\in\\mathbb{R}^+$$Variable time step\nApparition of instability areas below the critical time step Impossibility to augment the time step within the simulation for a non dissipative system. Only the strong stability analysis based on the formulation of the scheme as a multistep scheme is relevant. Stability conditions for the stiff problem\n$$ \\begin{aligned} \u0026\\Delta t_{n+2}\\leq\\Delta t_{n+1}\\\\ \u0026\\Delta t_{n+2}\\Delta t_{n+1}\\leq(\\Delta t_{\\text{cr}}^{\\text{e}})^2\\\\ \u0026(\\Delta t_{n+2}+\\Delta t_{n+1})^2(1 - \\tfrac{1}{2}\\Delta t_{n+2}\\Delta t_{n+1}\\frac{k}{m})^2 - 4\\Delta t_{n+1}\\Delta t_n\u003c0 \\end{aligned} $$ Citation Georgette, B., Dureisseix, D., \u0026 Gravouil, A. (2024, July). A new stability analysis of variable time step central difference method for transient dynamics viscoelastic problems. In 11th European Nonlinear Dynamics Conference (ENOC 2024).\n@inproceedings{georgette2024new, title={A new stability analysis of variable time step central difference method for transient dynamics viscoelastic problems}, author={Georgette, Benjamin and Dureisseix, David and Gravouil, Anthony}, booktitle={11th European Nonlinear Dynamics Conference (ENOC 2024)}, year={2024} } ",
+  "wordCount" : "309",
+  "inLanguage": "en",
+  "datePublished": "2024-07-22T00:00:00Z",
+  "dateModified": "2024-07-22T00:00:00Z",
+  "author":[{
+    "@type": "Person",
+    "name": "Benjamin Georgette"
+  }, {
+    "@type": "Person",
+    "name": "David Dureisseix"
+  }, {
+    "@type": "Person",
+    "name": "Anthony Gravouil"
+  }],
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "http://localhost:1313/communications/2024-enoc/2024-enoc/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Benjamin Georgette",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "http://localhost:1313/favicon.ico"
+    }
+  }
+}
+</script>
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.css" integrity="sha384-wcIxkf4k558AjM3Yz3BBFQUbk/zgIYC2R0QpeeYb+TwlBVMrlgLqwRjRtGZiK7ww" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.js" integrity="sha384-hIoBPJpTUs74ddyc4bFZSM1TVlQDA60VBbJS0oA934VSz82sBx1X7kSx2ATBDIyd" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/contrib/auto-render.min.js" integrity="sha384-43gviWU0YVjaDtb/GhzOouOXtZMP/7XUzwPTstBeZFe/+rCMvRwr4yROQP43s0Xk" crossorigin="anonymous"
+  onload="renderMathInElement(document.body);"></script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement(document.body, {
+          delimiters: [
+            {left: '$$', right: '$$', display: true},
+            {left: '$', right: '$', display: false},
+            {left: "\\begin{equation}", right: "\\end{equation}", display: true},
+            {left: "\\begin{equation*}", right: "\\end{equation*}", display: true},
+            {left: "\\begin{align}", right: "\\end{align}", display: true},
+            {left: "\\begin{align*}", right: "\\end{align*}", display: true},
+            {left: "\\begin{alignat}", right: "\\end{alignat}", display: true},
+            {left: "\\begin{gather}", right: "\\end{gather}", display: true},
+            {left: "\\begin{CD}", right: "\\end{CD}", display: true},
+          ],
+          throwOnError : false
+        });
+    });
+</script>
+ 
+
+
+</head>
+
+<body class=" dark" id="top">
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="Benjamin Georgette">
+                <img src="http://localhost:1313/favicon.ico" alt="" aria-label="logo"
+                    height="18"
+                    width="18">Benjamin Georgette</a>
+            <div class="logo-switches">
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://localhost:1313/papers/" title="Papers">
+                    <span>Papers</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/communications/" title="Communications">
+                    <span>Communications</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/courses/" title="Courses">
+                    <span>Courses</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/archive/" title="Archive">
+                    <span>Archive</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+    <main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      A new stability analysis of the central difference method for transient dynamics viscoelastic problems
+    </h1>
+    <div class="post-meta"><span title='2024-07-22 00:00:00 +0000 UTC'>July 2024</span>&nbsp;&middot;&nbsp;Benjamin Georgette,&thinsp;David Dureisseix,&thinsp;Anthony Gravouil&nbsp;&middot;&nbsp;<a href="https://enoc24.dryfta.com/" rel="noopener noreferrer" target="_blank">ENOC2024</a>
+
+</div>
+  </header> 
+  <div class="post-content"><p>Download the <a href="./enoc2024_GEORGETTE_DUREISSEIX_GRAVOUIL.pdf">submitted abstract</a>, or the <a href="enoc2024_GEORGETTE_DUREISSEIX_GRAVOUIL_presentation.pdf">presentation slides</a>.</p>
+<h5 id="abstract">Abstract</h5>
+<p>We develop a new explicit integration method for transient dynamics computation of viscoelastic materials, surpassing
+the stability limits of Belytschko’s widely used half-lagged velocity approximation. Based on the central difference (CD) scheme, our
+method integrates the viscous stress strain law, while keeping an explicit scheme. Moreover, we provide a new stability analysis of
+the variable time step central difference method. We prove that CD’s stability can be ensured only thanks to the zero-stability criteria,
+based on the multistep formulation of the method. We perform analytical developments on a single degree of freedom problem. Thus,
+we show that, without viscous damping, ensuring stability requires to decrease, or at least to maintain constant the time step during the
+time integration. Furthermore, we prove that, with viscous damping, there exists a slight possibility of increasing the time step during
+the time integration.</p>
+<hr>
+<h5 id="main-results">Main results</h5>
+<p><em><strong>Constant time step</strong></em></p>
+<ul>
+<li>New integration method for the viscous stress-strain relationship with great stability properties.</li>
+</ul>
+$$(1-\alpha)\mathbf{\sigma}^{\text{v}}{n} + \alpha^{\text{v}}_{n+1} = \eta\mathbb{I}:\mathbf{\varepsilon}(\mathbf{v}_{n+1/2}),\qquad\alpha\in\mathbb{R}^+$$<p><em><strong>Variable time step</strong></em></p>
+<ul>
+<li>Apparition of instability areas below the critical time step</li>
+<li>Impossibility to augment the time step within the simulation for a non dissipative system.</li>
+<li>Only the strong stability analysis based on the formulation of the scheme as a multistep scheme is relevant.</li>
+</ul>
+<p><em>Stability conditions for the stiff problem</em></p>
+$$
+\begin{aligned} 
+    &\Delta t_{n+2}\leq\Delta t_{n+1}\\
+    &\Delta t_{n+2}\Delta t_{n+1}\leq(\Delta t_{\text{cr}}^{\text{e}})^2\\
+    &(\Delta t_{n+2}+\Delta t_{n+1})^2(1 - \tfrac{1}{2}\Delta t_{n+2}\Delta t_{n+1}\frac{k}{m})^2 - 4\Delta t_{n+1}\Delta t_n<0
+\end{aligned}
+$$<hr>
+<h5 id="citation">Citation</h5>
+<p>Georgette, B., Dureisseix, D., &amp; Gravouil, A. (2024, July). A new stability analysis of variable time step central difference method for transient dynamics viscoelastic problems. In 11th European Nonlinear Dynamics Conference (ENOC 2024).</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-BibTeX" data-lang="BibTeX"><span style="display:flex;"><span><span style="color:#a6e22e">@inproceedings</span>{georgette2024new,
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">title</span>=<span style="color:#e6db74">{A new stability analysis of variable time step central difference method for transient dynamics viscoelastic problems}</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">author</span>=<span style="color:#e6db74">{Georgette, Benjamin and Dureisseix, David and Gravouil, Anthony}</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">booktitle</span>=<span style="color:#e6db74">{11th European Nonlinear Dynamics Conference (ENOC 2024)}</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">year</span>=<span style="color:#e6db74">{2024}</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><hr>
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="http://localhost:1313/tags/central-difference-method/">Central Difference Method</a></li>
+      <li><a href="http://localhost:1313/tags/stability-analysis/">Stability Analysis</a></li>
+      <li><a href="http://localhost:1313/tags/variable-time-step/">Variable Time Step</a></li>
+      <li><a href="http://localhost:1313/tags/viscoelasticity/">Viscoelasticity</a></li>
+      <li><a href="http://localhost:1313/tags/transient-dynamics/">Transient Dynamics</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+    <span>&copy; 2025 <a href="http://localhost:1313/">Benjamin Georgette</a></span> ·     
+    <span>
+    Powered by 
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/pmichaillat/hugo-website/" rel="noopener" target="_blank">a modified version</a>
+         of 
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'copy';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'copied!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Benjamin Georgette</title>
+    <link>http://localhost:1313/</link>
+    <description>Recent content on Benjamin Georgette</description>
+    <generator>Hugo -- 0.144.2</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 20 Feb 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Location</title>
+      <link>http://localhost:1313/location/</link>
+      <pubDate>Thu, 20 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/location/</guid>
+      <description>Benjamin Georgette mailing and office addresses at the Laboratoire de Mécanique des Contacts et des Structures.</description>
+    </item>
+    <item>
+      <title>A new stability analysis of the central difference method for transient dynamics viscoelastic problems</title>
+      <link>http://localhost:1313/communications/2024-enoc/</link>
+      <pubDate>Mon, 22 Jul 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/communications/2024-enoc/</guid>
+      <description>This paper is a presentation made for the ENOC2024 scientific conference.</description>
+    </item>
+    <item>
+      <title>A new stability analysis of the central difference method for transient dynamics viscoelastic problems</title>
+      <link>http://localhost:1313/papers/jsc/</link>
+      <pubDate>Mon, 22 Jul 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/papers/jsc/</guid>
+      <description>This paper, submitted to the Journal of Scientific Computing</description>
+    </item>
+    <item>
+      <title>De la thermodynamique des processus irréversibles aux structures de Dirac - L&#39;exemple de la thermo-visco-élasticité en grandes transformations.</title>
+      <link>http://localhost:1313/communications/2024-gdrgdm/</link>
+      <pubDate>Fri, 28 Jun 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/communications/2024-gdrgdm/</guid>
+      <description>This paper is a presentation made for the annual meeting of the GDR GDM at La Rochelle</description>
+    </item>
+    <item>
+      <title>List of Irregular Verbs Across Romance Languages</title>
+      <link>http://localhost:1313/data/data1/</link>
+      <pubDate>Thu, 07 Mar 2013 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/data/data1/</guid>
+      <description>This dataset contains all irregular verbs in known Romance languages.</description>
+    </item>
+    <item>
+      <title>Portugese Irregular Verbs</title>
+      <link>http://localhost:1313/books/book1/</link>
+      <pubDate>Wed, 01 Jan 1997 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/books/book1/</guid>
+      <description>This book discusses Portugese irregular verbs in great details.</description>
+    </item>
+  </channel>
+</rss>

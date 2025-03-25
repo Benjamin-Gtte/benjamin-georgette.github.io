@@ -1,0 +1,109 @@
+baseURL: "https://benjamingeorgette.org/" 
+title: Benjamin Georgette
+theme: PaperMod
+
+enableInlineShortcodes: true
+enableRobotsTXT: true
+
+taxonomies:
+    tag: tags
+
+menu:
+    main:
+        - name: Papers
+          url: papers/
+          weight: 1
+        - name: Communications
+          url: communications/
+          weight: 2
+        - name: Courses
+          url: courses/
+          weight: 3
+        - name: Archive 
+          url: archive/
+          weight: 4
+params:
+    description: "I am Benjamin Georgette, PhD Student of theoretical mechanics at LaMCoS Lyon."
+    author: Benjamin Georgette (He/Him)
+    # googleAnalyticsID: "G-XXXXX"
+    DateFormat: "January 2006"
+    defaultTheme: light
+    hideFooter: false
+    disableThemeToggle: true
+    ShowShareButtons: false
+    ShowReadingTime: false
+    disableSpecial1stPost: true
+    disableAnchoredHeadings: true
+    ShowPostNavLinks: false
+    ShowBreadCrumbs: false
+    ShowCodeCopyButtons: true
+    ShowAllPagesInArchive: false
+    MainSections: ["papers","communications","courses"]
+    ShowToc: False
+    disableScrollToTop: true
+    TocOpen: true
+    ShowWordCount: false
+    UseHugoToc: true
+    comments: false
+    math: true
+    profileMode:
+          enabled: true
+          title: Benjamin Georgette
+          subtitle: "I am Benjamin Georgette, PhD Student of theoretical mechanics at LaMCoS Lyon."
+          imageUrl: "photo_id.jpeg"
+          imageWidth: 160
+          imageHeight: 160
+          buttons:
+            - name: Papers
+              url: papers/
+            - name: Communications
+              url: communications/
+            - name: Courses
+              url: courses/
+            - name: Archive
+              url: archive/ 
+    socialIcons:
+        - name: CV
+          url: cv_benjamin.pdf
+        - name: Google Scholar
+          url: https://scholar.google.com/citations?user=pxUrqpYAAAAJ&hl=en
+        - name: Email
+          url: mailto:benjamin.georgette@insa-lyon.fr
+        - name: Location
+          url: location/
+        - name: Linkedin
+          url: https://www.linkedin.com/in/benjamin-georgette/
+    assets:
+        disableScrollBarStyle: true
+        disableHLJS: true
+    cover:
+        hiddenInList: false
+        hiddenInSingle: true
+    label:
+      text: "Benjamin Georgette"
+      icon: favicon.ico
+      iconHeight: 18
+markup:
+    goldmark:
+        renderer:
+          unsafe: true
+        extensions:
+          passthrough:
+            delimiters:
+              block:
+              - - \[
+                - \]
+              - - $$
+                - $$
+              inline:
+              - - \(
+                - \)
+            enable: true
+
+    highlight:
+        guessSyntax: true
+        style: monokai 
+    tableOfContents:
+        endLevel: 2
+        ordered: false
+        startLevel: 2
