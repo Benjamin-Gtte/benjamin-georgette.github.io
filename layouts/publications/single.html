@@ -1,0 +1,101 @@
+{{ define "main" }}
+<link rel="stylesheet" href="/css/custom.css">
+
+<div class="landing-wrap">
+<article class="lw-section">
+
+  <!-- ── Title ── -->
+  <h2 class="lw-name" style="margin-bottom: 1.5rem;">{{ .Title }}</h2>
+
+  <!-- ── Meta card ── -->
+    <span class="lw-pub-authors">{{ .Params.authors }}</span><br>
+    <span class="lw-pub-meta" style="margin-top: 0.4rem;">
+      {{ with .Params.journal }}<em>{{ . }}</em>{{ end }}
+      {{ with .Params.year }}, {{ . }}{{ end }}
+      {{ with .Params.doi }} · <a href="https://doi.org/{{ . }}" target="_blank" rel="noopener">DOI: {{ . }}</a>{{ end }}
+    </span>
+
+    <!-- ── Links ── -->
+    <div class="lw-links" style="margin-top: 0.75rem;">
+      {{ with .Params.doi }}
+      <a class="lw-btn" href="https://doi.org/{{ . }}" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+        DOI
+      </a>
+      {{ end }}
+      {{ with .Params.pdf }}
+      <a class="lw-btn" href="{{ . }}" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+        PDF
+      </a>
+      {{ end }}
+      {{ with .Params.code }}
+      <a class="lw-btn" href="{{ . }}" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+        Code
+      </a>
+      {{ end }}
+    </div>
+  </div>
+
+  
+  <!-- ── Abstract / content ── -->
+  {{ with .Content }}
+  <div class="lw-section">
+    <h2 class="lw-section-title">Abstract</h2>
+    <div style="font-size: 0.95rem; line-height: 1.75; color: var(--ink-muted);">
+      {{ . }}
+    </div>
+  </div>
+  {{ end }}
+
+  <!-- ── Citation panels ── -->
+{{ if or .Params.cite .Params.bibtex }}
+<div class="lw-section">
+  <h2 class="lw-section-title">How to cite</h2>
+
+  {{ with .Params.cite }}
+  <div class="lw-cite-panel" id="lw-cite-plain">
+    <div class="lw-cite-header">
+      <span class="lw-cite-label">Plain text</span>
+      <button class="lw-btn" onclick="lwCopy('lw-cite-plain-text', this)">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+        Copy
+        <span class="lw-toast" aria-live="polite">Copied!</span>
+      </button>
+    </div>
+    <p class="lw-cite-text" id="lw-cite-plain-text">{{ . }}</p>
+  </div>
+  {{ end }}
+
+  {{ with .Params.bibtex }}
+  <div class="lw-cite-panel" id="lw-cite-bib" style="margin-top: 1rem;">
+    <div class="lw-cite-header">
+      <span class="lw-cite-label">BibTeX</span>
+      <button class="lw-btn" onclick="lwCopy('lw-cite-bib-text', this)">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+        Copy
+        <span class="lw-toast" aria-live="polite">Copied!</span>
+      </button>
+    </div>
+    <pre class="lw-cite-text" id="lw-cite-bib-text">{{ . }}</pre>
+  </div>
+  {{ end }}
+
+</div>
+{{ end }}
+
+<script>
+function lwCopy(id, btn) {
+  const text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text).then(function () {
+    var toast = btn.querySelector('.lw-toast');
+    toast.classList.add('show');
+    setTimeout(function () { toast.classList.remove('show'); }, 2000);
+  });
+}
+</script>
+
+</article>
+
+{{ end }}

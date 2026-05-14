@@ -1,0 +1,323 @@
+<!doctype html>
+
+
+
+
+
+
+
+<html
+  class="not-ready lg:text-base"
+  style="--bg:#faf8f1"
+  lang="en-us"
+  dir="ltr"
+><head><script src="/benjamin-georgette/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=benjamin-georgette/livereload" data-no-instant defer></script>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, shrink-to-fit=no"
+  />
+
+  
+  <title>Benjamin GEORGETTE</title>
+
+  
+  <meta name="theme-color" />
+
+  
+  <meta
+    name="description"
+    content="A personal blog"
+  />
+  <meta name="author" content="Benjamin GEORGETTE" /><link rel="preload stylesheet" as="style" href="http://localhost:1313/benjamin-georgette/main.min.e86ae67e01e2d2055106abf72be7357c950191060e5f159f24e2790fd8237e8c.css" integrity="sha256-6GrmfgHi0gVRBqv3K&#43;c1fJUBkQYOXxWfJOJ5D9gjfow=" />
+
+  
+  <link rel="preload" as="image" href="http://localhost:1313/benjamin-georgette/theme.svg" />
+
+  <link rel="preload" as="image" href="https://www.gravatar.com/avatar/78796202837a724d69e6332184faa513?s=160&amp;d=identicon" />
+
+  
+
+  <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/katex.min.css"
+  integrity="sha384-3UiQGuEI4TTMaFmGIZumfRPtfKQ3trwQE2JgosJxCnGmQpL/lJdjpcHkaaFwHlcI"
+  crossorigin="anonymous"
+/>
+<script
+  defer
+  src="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/katex.min.js"
+  integrity="sha384-G0zcxDFp5LWZtDuRMnBkk3EphCK1lhEf4UEyEM693ka574TZGwo4IWwS6QLzM/2t"
+  crossorigin="anonymous"
+></script>
+<script
+  defer
+  src="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/contrib/auto-render.min.js"
+  integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05"
+  crossorigin="anonymous"
+></script><script>
+  document.addEventListener('DOMContentLoaded', () =>
+    renderMathInElement(document.body, {
+      
+      
+      delimiters: [
+        { left: '$$', right: '$$', display: true },
+        { left: '$', right: '$', display: false },
+      ],
+      
+      throwOnError: false,
+    }),
+  );
+</script>
+
+
+  
+  <link
+    rel="icon"
+    href="http://localhost:1313/benjamin-georgette/favicon.ico"
+  />
+  <link
+    rel="apple-touch-icon"
+    href="http://localhost:1313/benjamin-georgette/apple-touch-icon.png"
+  />
+
+  <meta name="generator" content="Hugo 0.160.1">
+</head>
+<body
+    class="bg-(--bg) text-black antialiased duration-200 ease-out [-webkit-tap-highlight-color:transparent] dark:text-white"
+  ><header
+  class="mx-auto flex h-[4.5rem] max-w-(--w) px-8 whitespace-nowrap lg:justify-center"
+>
+  <div class="relative z-50 flex items-center ltr:mr-auto rtl:ml-auto">
+    <a
+      class="-translate-y-[1px] text-2xl font-medium"
+      href="http://localhost:1313/benjamin-georgette/"
+      >Benjamin GEORGETTE</a
+    >
+    <div
+      class="btn-dark text-[0px] ltr:ml-4 rtl:mr-4 h-6 w-6 shrink-0 cursor-pointer [background:url(./theme.svg)_left_center/cover_no-repeat] dark:invert dark:[background-position:right]"
+      role="button"
+      aria-label="Dark"
+    ></div>
+  </div>
+
+  <div
+    class="btn-menu relative z-50 flex h-[4.5rem] w-[5rem] shrink-0 cursor-pointer flex-col items-center justify-center gap-2.5 lg:hidden ltr:-mr-8 rtl:-ml-8"
+    role="button"
+    aria-label="Menu"
+  ></div>
+
+  <script>
+    
+    const htmlClass = document.documentElement.classList;
+    setTimeout(() => {
+      htmlClass.remove('not-ready');
+    }, 10);
+
+    
+    const btnMenu = document.querySelector('.btn-menu');
+    btnMenu.addEventListener('click', () => {
+      htmlClass.toggle('open');
+    });
+
+    
+    const metaTheme = document.querySelector('meta[name="theme-color"]');
+    const lightBg = '#faf8f1'.replace(/"/g, '');
+    const setDark = (isDark) => {
+      metaTheme.setAttribute('content', isDark ? "rgb(0 0 0 / 85%)" : lightBg);
+      htmlClass[isDark ? 'add' : 'remove']('dark');
+      localStorage.setItem('dark', isDark);
+    };
+
+    
+    const darkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+    if (htmlClass.contains('dark')) {
+      setDark(true);
+    } else {
+      const darkVal = localStorage.getItem('dark');
+      setDark(darkVal ? darkVal === 'true' : darkScheme.matches);
+    }
+
+    
+    darkScheme.addEventListener('change', (event) => {
+      setDark(event.matches);
+    });
+
+    
+    const btnDark = document.querySelector('.btn-dark');
+    btnDark.addEventListener('click', () => {
+      setDark(localStorage.getItem('dark') !== 'true');
+    });
+  </script>
+
+  <div
+    class="nav-wrapper fixed inset-x-0 top-full z-40 flex h-full flex-col justify-center bg-(--bg) pb-16 duration-200 select-none lg:static lg:h-auto lg:flex-row lg:bg-transparent! lg:pb-0 lg:transition-none"
+  ><nav
+      class="lg:ml-12 lg:flex lg:flex-row lg:items-center lg:space-x-10 rtl:space-x-reverse"
+    ><a
+        class="block text-center text-xl leading-[5rem] lg:text-base lg:font-normal"
+        href="/benjamin-georgette/publications/"
+        >Publications</a
+      ></nav>
+  </div>
+</header>
+<main
+      class="prose prose-neutral dark:prose-invert relative mx-auto min-h-[calc(100vh-9rem)] max-w-(--w) px-8 pt-14 pb-16"
+    >
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/custom.css">
+
+<div class="landing-wrap">
+
+  
+<div class="lw-hero">
+  
+    <img class="lw-photo" src="images/profile.jpg" alt="Photo of Benjamin GEORGETTE">
+  
+
+  <div class="lw-hero-info">
+    <div class="lw-bio">
+      <span class="lw-name">Benjamin GEORGETTE</span><br>
+      <span class="lw-title">Normalien — PhD Student · LaMCoS, INSA Lyon</span><br>
+      I am a French PhD student in theoretical mechanics, developping structure-preserving numerical methods for continuum thermodynamics.
+    </div>
+
+    <div class="lw-links">
+      
+      <a class="lw-btn" href="https://orcid.org/0009-0004-6836-4449" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M8 12h8M12 8v8"/></svg>
+        ORCID
+      </a>
+      
+
+      
+      <a class="lw-btn" href="https://scholar.google.com/citations?user=pxUrqpYAAAAJ&amp;hl=en" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 14l-4-4 4-4 4 4-4 4z"/><path d="M4 10l8-6 8 6"/><path d="M8 14v4a4 4 0 008 0v-4"/></svg>
+        Google Scholar
+      </a>
+      
+
+      
+      <a class="lw-btn" href="/cv/GEORGETTE_Benjamin_CV.pdf" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+        CV
+      </a>
+      
+
+      
+    </div>
+  </div>
+</div>
+  
+
+  
+  
+    
+    <div class="lw-section">
+    <h2 class="lw-section-title">
+        <a href="/publications">
+        Selected publications
+        <span style="font-size:0.8em;color:var(--ink-faint);margin-left:0.3rem;" aria-hidden="true">→</span>
+        </a>
+    </h2>
+    <ul class="lw-pub-list">
+        
+        <li class="lw-pub-item">
+        <a class="lw-pub-card-link" href="/benjamin-georgette/publications/2026-cras/">
+          <p>
+          <span class="lw-pub-authors">Georgette, B., Dureisseix, D., Gravouil, A.</span><br>
+          <span class="lw-pub-title">The Double Generator Boundary Augmented bracket structure: a structure-preserving space-time integration framework for coupled thermo-visco-elastodynamics</span><br>
+          <span class="lw-pub-meta">
+            <em>Comptes Rendus. Mécanique</em>
+            , 2026
+             · DOI: https://doi.org/10.5802/crmeca.357
+          </p>
+        </a>
+      </li>
+        
+        <li class="lw-pub-item">
+        <a class="lw-pub-card-link" href="/benjamin-georgette/publications/2025-jsc/">
+          <p>
+          <span class="lw-pub-authors">Georgette, B., Dureisseix, D., Gravouil, A.</span><br>
+          <span class="lw-pub-title">A New Stability Analysis of Variable Time Step Central Difference Method for Transient Dynamics Viscoelastic Problems</span><br>
+          <span class="lw-pub-meta">
+            <em>Journal of Scientific Computing</em>
+            , 2025
+             · DOI: https://doi.org/10.1007/s10915-025-03090-x
+          </p>
+        </a>
+      </li>
+        
+    </ul>
+    </div>
+    
+
+  
+
+
+<div class="lw-section">
+  <h2 class="lw-section-title">Upcoming seminars &amp; conferences</h2>
+  <ul class="lw-sem-list">
+    
+    <li class="lw-sem-item">
+      <div class="lw-sem-date">May 2026</div>
+      <div>
+        <span class="lw-sem-talk">Un intégrateur géométrique basé sur la Double Generator Boundary Augmented bracket structure pour la thermo-élastodynamique couplée.</span><br>
+        <span class="lw-sem-conf">CSMA · Hyères (France)</span><br>
+        <span class="lw-sem-mini">Numerical methods</span>
+      </div>
+    </li>
+    
+    <li class="lw-sem-item">
+      <div class="lw-sem-date">July 2026</div>
+      <div>
+        <span class="lw-sem-talk">A Geometric Integrator Based on the Double Bracket Structure for Coupled Thermo-Elastodynamics</span><br>
+        <span class="lw-sem-conf">WCCM · Munich (Germany)</span><br>
+        <span class="lw-sem-mini">MS058 - Structure-Preserving Discretization Techniques for Coupled Problems</span>
+      </div>
+    </li>
+    
+  </ul>
+</div>
+
+
+  
+
+  <div class="lw-section">
+  <h2 class="lw-section-title">Contact &amp; location</h2>
+  <div class="lw-cite-header"><span class="lw-cite-label">Email</span></div>
+    <p><a href="mailto:benjamin.georgette@insa-lyon.fr">benjamin.georgette@insa-lyon.fr</a></p>
+  <div class="lw-cite-header">
+      <span class="lw-cite-label">Mailing adress</span>
+    </div>
+    <p>
+      Benjamin Georgette<br>
+      Laboratoire de Mécanique des Contacts et des Structures,  INSA Lyon<br>
+      27 bis Avenue Jean Capelle, 69100 Villeurbanne, France<br><br>
+    </p>
+    </div>
+    
+</div>
+</main><footer
+  class="mx-auto flex h-[4.5rem] max-w-(--w) items-center px-8 text-xs tracking-wider uppercase opacity-60"
+>
+  <div class="mr-auto">&copy;2026
+    <a class="link" href="http://localhost:1313/benjamin-georgette/">Benjamin GEORGETTE</a></div>
+  <a class="link mx-6" href="https://gohugo.io/" rel="noopener" target="_blank"
+    >powered by hugo️️</a
+  >️
+  <a
+    class="link"
+    href="https://github.com/nanxiaobei/hugo-paper"
+    rel="noopener"
+    target="_blank"
+    >hugo-paper</a
+  >
+</footer>
+</body>
+</html>

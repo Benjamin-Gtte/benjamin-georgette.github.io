@@ -1,0 +1,291 @@
+<!doctype html>
+
+
+
+
+
+
+
+<html
+  class="not-ready lg:text-base"
+  style="--bg:#faf8f1"
+  lang="en-us"
+  dir="ltr"
+><head><script src="/benjamin-georgette/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=benjamin-georgette/livereload" data-no-instant defer></script>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, shrink-to-fit=no"
+  />
+
+  
+  <title>A New Stability Analysis of Variable Time Step Central Difference Method for Transient Dynamics Viscoelastic Problems - Benjamin GEORGETTE</title>
+
+  
+  <meta name="theme-color" />
+
+  <meta name="description" content="In this paper, we propose a general framework for studying the stability properties of the central difference scheme for transient dynamics viscoelastic problems using both constant and variable time step. First, we introduce a new explicit constant time step integration method for viscoelastic materials. This new method surpasses the stability limits of Belytschko’s half-lagged velocity approximation. Second, we provide a new stability analysis of the variable time step central difference method. The proposed analysis shows that central difference stability can be ensured only thanks to the zero-stability criteria, based on the multistep formulation of the method. Without viscous damping, ensuring stability requires to decrease, or at least to maintain constant time step during the time integration. However, with viscous damping, there is a slight possibility of increasing the time step during the time integration process." />
+  <meta name="author" content="Benjamin GEORGETTE" /><link rel="preload stylesheet" as="style" href="http://localhost:1313/benjamin-georgette/main.min.e86ae67e01e2d2055106abf72be7357c950191060e5f159f24e2790fd8237e8c.css" integrity="sha256-6GrmfgHi0gVRBqv3K&#43;c1fJUBkQYOXxWfJOJ5D9gjfow=" />
+
+  
+  <link rel="preload" as="image" href="http://localhost:1313/benjamin-georgette/theme.svg" />
+
+  <link rel="preload" as="image" href="https://www.gravatar.com/avatar/78796202837a724d69e6332184faa513?s=160&amp;d=identicon" />
+
+  
+
+  <script
+    defer
+    src="http://localhost:1313/benjamin-georgette/highlight.min.js"
+    onload="hljs.initHighlightingOnLoad()"
+  ></script><link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/katex.min.css"
+  integrity="sha384-3UiQGuEI4TTMaFmGIZumfRPtfKQ3trwQE2JgosJxCnGmQpL/lJdjpcHkaaFwHlcI"
+  crossorigin="anonymous"
+/>
+<script
+  defer
+  src="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/katex.min.js"
+  integrity="sha384-G0zcxDFp5LWZtDuRMnBkk3EphCK1lhEf4UEyEM693ka574TZGwo4IWwS6QLzM/2t"
+  crossorigin="anonymous"
+></script>
+<script
+  defer
+  src="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/contrib/auto-render.min.js"
+  integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05"
+  crossorigin="anonymous"
+></script><script>
+  document.addEventListener('DOMContentLoaded', () =>
+    renderMathInElement(document.body, {
+      
+      
+      delimiters: [
+        { left: '$$', right: '$$', display: true },
+        { left: '$', right: '$', display: false },
+      ],
+      
+      throwOnError: false,
+    }),
+  );
+</script>
+
+
+  
+  <link
+    rel="icon"
+    href="http://localhost:1313/benjamin-georgette/favicon.ico"
+  />
+  <link
+    rel="apple-touch-icon"
+    href="http://localhost:1313/benjamin-georgette/apple-touch-icon.png"
+  />
+
+  <meta name="generator" content="Hugo 0.160.1">
+</head>
+<body
+    class="bg-(--bg) text-black antialiased duration-200 ease-out [-webkit-tap-highlight-color:transparent] dark:text-white"
+  ><header
+  class="mx-auto flex h-[4.5rem] max-w-(--w) px-8 whitespace-nowrap lg:justify-center"
+>
+  <div class="relative z-50 flex items-center ltr:mr-auto rtl:ml-auto">
+    <a
+      class="-translate-y-[1px] text-2xl font-medium"
+      href="http://localhost:1313/benjamin-georgette/"
+      >Benjamin GEORGETTE</a
+    >
+    <div
+      class="btn-dark text-[0px] ltr:ml-4 rtl:mr-4 h-6 w-6 shrink-0 cursor-pointer [background:url(./theme.svg)_left_center/cover_no-repeat] dark:invert dark:[background-position:right]"
+      role="button"
+      aria-label="Dark"
+    ></div>
+  </div>
+
+  <div
+    class="btn-menu relative z-50 flex h-[4.5rem] w-[5rem] shrink-0 cursor-pointer flex-col items-center justify-center gap-2.5 lg:hidden ltr:-mr-8 rtl:-ml-8"
+    role="button"
+    aria-label="Menu"
+  ></div>
+
+  <script>
+    
+    const htmlClass = document.documentElement.classList;
+    setTimeout(() => {
+      htmlClass.remove('not-ready');
+    }, 10);
+
+    
+    const btnMenu = document.querySelector('.btn-menu');
+    btnMenu.addEventListener('click', () => {
+      htmlClass.toggle('open');
+    });
+
+    
+    const metaTheme = document.querySelector('meta[name="theme-color"]');
+    const lightBg = '#faf8f1'.replace(/"/g, '');
+    const setDark = (isDark) => {
+      metaTheme.setAttribute('content', isDark ? "rgb(0 0 0 / 85%)" : lightBg);
+      htmlClass[isDark ? 'add' : 'remove']('dark');
+      localStorage.setItem('dark', isDark);
+    };
+
+    
+    const darkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+    if (htmlClass.contains('dark')) {
+      setDark(true);
+    } else {
+      const darkVal = localStorage.getItem('dark');
+      setDark(darkVal ? darkVal === 'true' : darkScheme.matches);
+    }
+
+    
+    darkScheme.addEventListener('change', (event) => {
+      setDark(event.matches);
+    });
+
+    
+    const btnDark = document.querySelector('.btn-dark');
+    btnDark.addEventListener('click', () => {
+      setDark(localStorage.getItem('dark') !== 'true');
+    });
+  </script>
+
+  <div
+    class="nav-wrapper fixed inset-x-0 top-full z-40 flex h-full flex-col justify-center bg-(--bg) pb-16 duration-200 select-none lg:static lg:h-auto lg:flex-row lg:bg-transparent! lg:pb-0 lg:transition-none"
+  ><nav
+      class="lg:ml-12 lg:flex lg:flex-row lg:items-center lg:space-x-10 rtl:space-x-reverse"
+    ><a
+        class="block text-center text-xl leading-[5rem] lg:text-base lg:font-normal"
+        href="/benjamin-georgette/publications/"
+        >Publications</a
+      ></nav>
+  </div>
+</header>
+<main
+      class="prose prose-neutral dark:prose-invert relative mx-auto min-h-[calc(100vh-9rem)] max-w-(--w) px-8 pt-14 pb-16"
+    >
+<link rel="stylesheet" href="/css/custom.css">
+
+<div class="landing-wrap">
+<article class="lw-section">
+
+  
+  <h2 class="lw-name" style="margin-bottom: 1.5rem;">A New Stability Analysis of Variable Time Step Central Difference Method for Transient Dynamics Viscoelastic Problems</h2>
+
+  
+    <span class="lw-pub-authors">Georgette, B., Dureisseix, D., Gravouil, A.</span><br>
+    <span class="lw-pub-meta" style="margin-top: 0.4rem;">
+      <em>Journal of Scientific Computing</em>
+      , 2025
+       · <a href="https://doi.org/https://doi.org/10.1007/s10915-025-03090-x" target="_blank" rel="noopener">DOI: https://doi.org/10.1007/s10915-025-03090-x</a>
+    </span>
+
+    
+    <div class="lw-links" style="margin-top: 0.75rem;">
+      
+      <a class="lw-btn" href="https://doi.org/https://doi.org/10.1007/s10915-025-03090-x" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+        DOI
+      </a>
+      
+      
+      <a class="lw-btn" href="/articles/georgette-2025_JSC.pdf" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+        PDF
+      </a>
+      
+      
+    </div>
+  </div>
+
+  
+  
+  
+  <div class="lw-section">
+    <h2 class="lw-section-title">Abstract</h2>
+    <div style="font-size: 0.95rem; line-height: 1.75; color: var(--ink-muted);">
+      <p>In this paper, we propose a general framework for studying the stability properties of the central difference scheme for transient dynamics viscoelastic problems using both constant and variable time step. First, we introduce a new explicit constant time step integration method for viscoelastic materials. This new method surpasses the stability limits of Belytschko’s half-lagged velocity approximation. Second, we provide a new stability analysis of the variable time step central difference method. The proposed analysis shows that central difference stability can be ensured only thanks to the zero-stability criteria, based on the multistep formulation of the method. Without viscous damping, ensuring stability requires to decrease, or at least to maintain constant time step during the time integration. However, with viscous damping, there is a slight possibility of increasing the time step during the time integration process.</p>
+
+    </div>
+  </div>
+  
+
+  
+
+<div class="lw-section">
+  <h2 class="lw-section-title">How to cite</h2>
+
+  
+  <div class="lw-cite-panel" id="lw-cite-plain">
+    <div class="lw-cite-header">
+      <span class="lw-cite-label">Plain text</span>
+      <button class="lw-btn" onclick="lwCopy('lw-cite-plain-text', this)">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+        Copy
+        <span class="lw-toast" aria-live="polite">Copied!</span>
+      </button>
+    </div>
+    <p class="lw-cite-text" id="lw-cite-plain-text">Georgette, B., Dureisseix, D. and Gravouil, A. (2025) ‘A New Stability Analysis of Variable Time Step Central Difference Method for Transient Dynamics Viscoelastic Problems’, Journal of Scientific Computing, 105(2), p. 63. Available at: https://doi.org/10.1007/s10915-025-03090-x.</p>
+  </div>
+  
+
+  
+  <div class="lw-cite-panel" id="lw-cite-bib" style="margin-top: 1rem;">
+    <div class="lw-cite-header">
+      <span class="lw-cite-label">BibTeX</span>
+      <button class="lw-btn" onclick="lwCopy('lw-cite-bib-text', this)">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+        Copy
+        <span class="lw-toast" aria-live="polite">Copied!</span>
+      </button>
+    </div>
+    <pre class="lw-cite-text" id="lw-cite-bib-text">@article{georgette-2025a,
+title = {A {{New Stability Analysis}} of {{Variable Time Step Central Difference Method}} for {{Transient Dynamics Viscoelastic Problems}}},
+author = {Georgette, Benjamin and Dureisseix, David and Gravouil, Anthony},
+year = 2025,
+journal = {Journal of Scientific Computing},
+volume = {105},
+number = {2},
+pages = {63},
+issn = {0885-7474, 1573-7691},
+doi = {10.1007/s10915-025-03090-x},
+}
+</pre>
+  </div>
+  
+
+</div>
+
+
+<script>
+function lwCopy(id, btn) {
+  const text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text).then(function () {
+    var toast = btn.querySelector('.lw-toast');
+    toast.classList.add('show');
+    setTimeout(function () { toast.classList.remove('show'); }, 2000);
+  });
+}
+</script>
+
+</article>
+
+</main><footer
+  class="mx-auto flex h-[4.5rem] max-w-(--w) items-center px-8 text-xs tracking-wider uppercase opacity-60"
+>
+  <div class="mr-auto">&copy;2026
+    <a class="link" href="http://localhost:1313/benjamin-georgette/">Benjamin GEORGETTE</a></div>
+  <a class="link mx-6" href="https://gohugo.io/" rel="noopener" target="_blank"
+    >powered by hugo️️</a
+  >️
+  <a
+    class="link"
+    href="https://github.com/nanxiaobei/hugo-paper"
+    rel="noopener"
+    target="_blank"
+    >hugo-paper</a
+  >
+</footer>
+</body>
+</html>

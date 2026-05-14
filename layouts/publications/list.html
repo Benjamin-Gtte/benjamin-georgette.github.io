@@ -1,0 +1,25 @@
+{{ define "main" }}
+<link rel="stylesheet" href="/css/custom.css">
+
+<div class="landing-wrap">
+  <div class="lw-section">
+    <h2 class="lw-section-title">Publications</h2>
+    <ul class="lw-pub-list">
+      {{ range (sort .Pages ".Params.year" "desc") }}
+      <li class="lw-pub-item">
+        <a class="lw-pub-card-link" href="{{ .RelPermalink }}">
+          <p>
+          <span class="lw-pub-authors">{{ .Params.authors }}</span><br>
+          <span class="lw-pub-title">{{ .Title }}</span><br>
+          <span class="lw-pub-meta">
+            <em>{{ .Params.journal }}</em>
+            {{ with .Params.year }}, {{ . }}{{ end }}
+            {{ with .Params.doi }} · DOI: {{ . }}{{ end }}
+          </p>
+        </a>
+      </li>
+      {{ end }}
+    </ul>
+  </div>
+</div>
+{{ end }}

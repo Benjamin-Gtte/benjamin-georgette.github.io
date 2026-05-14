@@ -1,0 +1,28 @@
+baseURL = 'https://benjamin-gtte.github.io/benjamin-georgette/'
+locale = 'en-us'
+title = 'Benjamin GEORGETTE'
+theme = "paper"
+buildFuture = true
+
+[params]
+  color = 'linen'   # or 'wheat', 'gray', 'light'
+  disableThemeToggle = false
+  avatar = 'images/profile.jpg'
+  name = 'Benjamin GEORGETTE'
+  bio = 'PhD student - Theoretical Mechanics - LaMCoS Lyon'
+  disableHLJS = false                        # disable highlight.js
+  disablePostNavigation = false              # disable post navigation
+  monoDarkIcon = true                       # show monochrome dark mode icon
+  math = true                               # enable KaTeX math typesetting globally
+  localKatex = false                        # use local KaTeX js/css instead of CDN
+  favicon = "favicon.ico"                   # customize the default favicon
+  appleTouchIcon = "apple-touch-icon.png"   # customize the default Apple touch icon
+  customCSS = ["css/custom.css"]
+
+
+
+[[menu.main]]
+    identifier = "Publications"
+    name = "Publications"
+    url = "/publications/"
+    weight = 10

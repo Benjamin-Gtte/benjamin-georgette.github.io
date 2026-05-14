@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>http://localhost:1313/benjamin-georgette/conferences/</loc>
+    <lastmod>2026-07-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/benjamin-georgette/conferences/2026-wccm/</loc>
+    <lastmod>2026-07-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/benjamin-georgette/</loc>
+    <lastmod>2026-07-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/benjamin-georgette/conferences/2026-csma/</loc>
+    <lastmod>2026-05-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/benjamin-georgette/publications/2025-jsc/</loc>
+  </url><url>
+    <loc>http://localhost:1313/benjamin-georgette/categories/</loc>
+  </url><url>
+    <loc>http://localhost:1313/benjamin-georgette/publications/2025-jacobi/</loc>
+  </url><url>
+    <loc>http://localhost:1313/benjamin-georgette/publications/2023-master/</loc>
+  </url><url>
+    <loc>http://localhost:1313/benjamin-georgette/publications/</loc>
+  </url><url>
+    <loc>http://localhost:1313/benjamin-georgette/tags/</loc>
+  </url><url>
+    <loc>http://localhost:1313/benjamin-georgette/publications/2026-cras/</loc>
+  </url>
+</urlset>

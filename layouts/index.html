@@ -1,0 +1,138 @@
+{{ define "main" }}
+{{/*
+  Landing page template — adapted for hugo-paper (nanxiaobei/hugo-paper).
+
+  Key differences from the PaperMod version:
+  • Dark-mode selector: Paper adds class="dark" on <body>, not <html>.
+  • No theme-level CSS variables (--font-body, --font-serif, --radius).
+    We declare everything ourselves in :root.
+  • Google Fonts are loaded here via a <link>; if you prefer, move the
+    two preconnect + href lines into layouts/partials/extend_head.html.
+  • The template wrapper "define main" is identical to PaperMod.
+*/}}
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/custom.css">
+
+<div class="landing-wrap">
+
+  <!-- ── Hero ──────────────────────────────────────────── -->
+<div class="lw-hero">
+  {{ with .Params.photo }}
+    <img class="lw-photo" src="{{ . }}" alt="Photo of {{ $.Site.Title }}">
+  {{ else }}
+    <div class="lw-photo-placeholder">BG</div>
+  {{ end }}
+
+  <div class="lw-hero-info">
+    <div class="lw-bio">
+      <span class="lw-name">{{ .Params.name | default "Benjamin Georgette" }}</span><br>
+      <span class="lw-title">{{ .Params.position | default "PhD Student — Theoretical Mechanics · LaMCoS, INSA Lyon" }}</span><br>
+      {{ .Params.bio | default "I am a French PhD student in theoretical mechanics at the Laboratoire de Mécanique des Contacts et des Structures (LaMCoS), INSA Lyon, developping structure-preserving numerical methods for continuum thermodynamics." }}
+    </div>
+
+    <div class="lw-links">
+      {{ with .Params.orcid }}
+      <a class="lw-btn" href="{{ . }}" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M8 12h8M12 8v8"/></svg>
+        ORCID
+      </a>
+      {{ end }}
+
+      {{ with .Params.scholar }}
+      <a class="lw-btn" href="{{ . }}" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 14l-4-4 4-4 4 4-4 4z"/><path d="M4 10l8-6 8 6"/><path d="M8 14v4a4 4 0 008 0v-4"/></svg>
+        Google Scholar
+      </a>
+      {{ end }}
+
+      {{ with .Params.cv }}
+      <a class="lw-btn" href="{{ . }}" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+        CV
+      </a>
+      {{ end }}
+
+      {{ with .Params.researchgate }}
+      <a class="lw-btn" href="{{ . }}" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 8h3a2 2 0 010 4H9v-4zm0 4h5l2 4"/></svg>
+        ResearchGate
+      </a>
+      {{ end }}
+    </div>
+  </div>
+</div>
+  
+
+  <!-- ── Publications ──────────────────────────────────────────────────────
+       Reads .Params.publications from the page's front matter.
+       The heading links to the /publications section if it exists.
+  ─────────────────────────────────────────────────────────────────────── -->
+  {{ $selected := where (where $.Site.RegularPages "Section" "publications") ".Params.selected" true }}
+    {{ with $selected }}
+    <div class="lw-section">
+    <h2 class="lw-section-title">
+        <a href="{{ "/publications" }}">
+        Selected publications
+        <span style="font-size:0.8em;color:var(--ink-faint);margin-left:0.3rem;" aria-hidden="true">→</span>
+        </a>
+    </h2>
+    <ul class="lw-pub-list">
+        {{ range (sort . ".Params.year" "desc") }}
+        <li class="lw-pub-item">
+        <a class="lw-pub-card-link" href="{{ .RelPermalink }}">
+          <p>
+          <span class="lw-pub-authors">{{ .Params.authors }}</span><br>
+          <span class="lw-pub-title">{{ .Title }}</span><br>
+          <span class="lw-pub-meta">
+            <em>{{ .Params.journal }}</em>
+            {{ with .Params.year }}, {{ . }}{{ end }}
+            {{ with .Params.doi }} · DOI: {{ . }}{{ end }}
+          </p>
+        </a>
+      </li>
+        {{ end }}
+    </ul>
+    </div>
+    {{ end }}
+
+  <!-- ── Seminars ───────────────────────────────────────── -->
+{{ $upcoming := where (where $.Site.RegularPages "Section" "conferences") ".Params.upcoming" true }}
+{{ with $upcoming }}
+<div class="lw-section">
+  <h2 class="lw-section-title">Upcoming seminars &amp; conferences</h2>
+  <ul class="lw-sem-list">
+    {{ range (sort . ".Params.Date" "asc") }}
+    <li class="lw-sem-item">
+      <div class="lw-sem-date">{{ .Date | dateFormat "January 2006" }}</div>
+      <div>
+        <span class="lw-sem-talk">{{ .Params.title }}</span><br>
+        <span class="lw-sem-conf">{{ .Params.conference }}{{ with .Params.location }} · {{ . }}{{ end }}</span><br>
+        {{ with .Params.symposium }}<span class="lw-sem-mini">{{ . }}</span>{{ end }}
+      </div>
+    </li>
+    {{ end }}
+  </ul>
+</div>
+{{ end }}
+
+  <!-- ── Contact ───────────────────────────────────────── -->
+
+  <div class="lw-section">
+  <h2 class="lw-section-title">Contact &amp; location</h2>
+  <div class="lw-cite-header"><span class="lw-cite-label">Email</span></div>
+    <p>{{ with .Params.email }}<a href="mailto:{{ . }}">{{ . }}</a>{{ end }}</p>
+  <div class="lw-cite-header">
+      <span class="lw-cite-label">Mailing adress</span>
+    </div>
+    <p>
+      Benjamin Georgette<br>
+      Laboratoire de Mécanique des Contacts et des Structures,  INSA Lyon<br>
+      27 bis Avenue Jean Capelle, 69100 Villeurbanne, France<br><br>
+    </p>
+    </div>
+    
+</div>
+{{ end }}
