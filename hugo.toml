@@ -1,4 +1,4 @@
-baseURL = 'https://benjamin-gtte.github.io/benjamin-georgette/'
+baseURL = "https://benjamin-gtte.github.io/"
 locale = 'en-us'
 title = 'Benjamin GEORGETTE'
 theme = "paper"
