@@ -2,52 +2,52 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>home on Benjamin GEORGETTE</title>
-    <link>http://localhost:1313/benjamin-georgette/</link>
+    <link>http://localhost:1313/</link>
     <description>Recent content in home on Benjamin GEORGETTE</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 01 Jul 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/benjamin-georgette/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>A Geometric Integrator Based on the Double Bracket Structure for Coupled Thermo-Elastodynamics</title>
-      <link>http://localhost:1313/benjamin-georgette/conferences/2026-wccm/</link>
+      <link>http://localhost:1313/conferences/2026-wccm/</link>
       <pubDate>Wed, 01 Jul 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/benjamin-georgette/conferences/2026-wccm/</guid>
+      <guid>http://localhost:1313/conferences/2026-wccm/</guid>
       <description></description>
     </item>
     <item>
       <title>Un intégrateur géométrique basé sur la Double Generator Boundary Augmented bracket structure pour la thermo-élastodynamique couplée.</title>
-      <link>http://localhost:1313/benjamin-georgette/conferences/2026-csma/</link>
+      <link>http://localhost:1313/conferences/2026-csma/</link>
       <pubDate>Tue, 19 May 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/benjamin-georgette/conferences/2026-csma/</guid>
+      <guid>http://localhost:1313/conferences/2026-csma/</guid>
       <description></description>
     </item>
     <item>
       <title>A New Stability Analysis of Variable Time Step Central Difference Method for Transient Dynamics Viscoelastic Problems</title>
-      <link>http://localhost:1313/benjamin-georgette/publications/2025-jsc/</link>
+      <link>http://localhost:1313/publications/2025-jsc/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/benjamin-georgette/publications/2025-jsc/</guid>
+      <guid>http://localhost:1313/publications/2025-jsc/</guid>
       <description>&lt;p&gt;In this paper, we propose a general framework for studying the stability properties of the central difference scheme for transient dynamics viscoelastic problems using both constant and variable time step. First, we introduce a new explicit constant time step integration method for viscoelastic materials. This new method surpasses the stability limits of Belytschko’s half-lagged velocity approximation. Second, we provide a new stability analysis of the variable time step central difference method. The proposed analysis shows that central difference stability can be ensured only thanks to the zero-stability criteria, based on the multistep formulation of the method. Without viscous damping, ensuring stability requires to decrease, or at least to maintain constant time step during the time integration. However, with viscous damping, there is a slight possibility of increasing the time step during the time integration process.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Derivation of the Jacobi identity for continuum thermodynamics: application to thermo-visco-elastodynamics</title>
-      <link>http://localhost:1313/benjamin-georgette/publications/2025-jacobi/</link>
+      <link>http://localhost:1313/publications/2025-jacobi/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/benjamin-georgette/publications/2025-jacobi/</guid>
+      <guid>http://localhost:1313/publications/2025-jacobi/</guid>
       <description>&lt;p&gt;The Double Bracket Structure is a variational bracket framework. This research report presents various details of calculus that have been required to derive the results of a main paper, submitted to a peer-reviewed journal. First, the structure is derived for a uni-dimensional small strain generalized standard material, with a general quadratic dissipation potential. Second, it is developed for the example of large strain thermo-visco-elastodynamics, within the multisymplectic framework&lt;/p&gt;</description>
     </item>
     <item>
       <title>Explicit multi-symplectic variable time step integrator for non-linear dynamics: application to viscoelastic materials</title>
-      <link>http://localhost:1313/benjamin-georgette/publications/2023-master/</link>
+      <link>http://localhost:1313/publications/2023-master/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/benjamin-georgette/publications/2023-master/</guid>
+      <guid>http://localhost:1313/publications/2023-master/</guid>
       <description>&lt;p&gt;The aim of this master&amp;rsquo;s thesis report is to develop an explicit multi-symplectic time integrator with variable time steps for non-linear dynamics, applied to viscoelastic materials. The problems considered (tension-compression beam, simple pendulum) are integrated using an explicit time integrator, whose properties of stability, consistency, energy conservation and convergence are studied. The behavior of the problems, first elastic, then stiff, then viscous, is taken into account in the development of the integrator. A new constant-time integration method for structural dynamics is proposed in the viscous case, generalizing the Belytschko approximation. The properties of the integrator are then studied in the case of a non-uniform time grid. This final study will show that, in the case of a non-dissipative problem, the time step can only decrease in a simulation, whereas the introduction of mechanical dissipation allows the time step within a simulation to increase.&lt;/p&gt;</description>
     </item>
     <item>
       <title>The Double Generator Boundary Augmented bracket structure: a structure-preserving space-time integration framework for coupled thermo-visco-elastodynamics</title>
-      <link>http://localhost:1313/benjamin-georgette/publications/2026-cras/</link>
+      <link>http://localhost:1313/publications/2026-cras/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/benjamin-georgette/publications/2026-cras/</guid>
+      <guid>http://localhost:1313/publications/2026-cras/</guid>
       <description>&lt;p&gt;The Double Generator Boundary Augmented bracket structure is a double generator bracket formulation, tailored to model continuum thermodynamics. Based on the idea of bracket generated formulations, this framework encompasses balance principles and thermodynamics laws within a unique expression. The present paper develops the methodology to derive this structure from classical equations of continuum thermodynamics for two examples. We consider first a unidimensional small strains generalized standard material, with a general quadratic dissipation potential. Then, we consider the example of large strain thermo-visco-elastodynamics, within the multisymplectic framework. We derive, for the first time, a multisymplectic Poisson bracket for thermo- (visco)-elastodynamics. Eventually, both formulations are shown to recover exactly balance principles and thermodynamics laws. This paper sets grounds necessary to develop variational integrators from the Double Generator Boundary Augmented bracket structure&lt;/p&gt;</description>
     </item>
   </channel>

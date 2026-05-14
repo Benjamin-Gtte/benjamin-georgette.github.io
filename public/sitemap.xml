@@ -2,30 +2,30 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/benjamin-georgette/conferences/</loc>
+    <loc>http://localhost:1313/conferences/</loc>
     <lastmod>2026-07-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/benjamin-georgette/conferences/2026-wccm/</loc>
+    <loc>http://localhost:1313/conferences/2026-wccm/</loc>
     <lastmod>2026-07-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/benjamin-georgette/</loc>
+    <loc>http://localhost:1313/</loc>
     <lastmod>2026-07-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/benjamin-georgette/conferences/2026-csma/</loc>
+    <loc>http://localhost:1313/conferences/2026-csma/</loc>
     <lastmod>2026-05-19T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/benjamin-georgette/publications/2025-jsc/</loc>
+    <loc>http://localhost:1313/publications/2025-jsc/</loc>
   </url><url>
-    <loc>http://localhost:1313/benjamin-georgette/categories/</loc>
+    <loc>http://localhost:1313/categories/</loc>
   </url><url>
-    <loc>http://localhost:1313/benjamin-georgette/publications/2025-jacobi/</loc>
+    <loc>http://localhost:1313/publications/2025-jacobi/</loc>
   </url><url>
-    <loc>http://localhost:1313/benjamin-georgette/publications/2023-master/</loc>
+    <loc>http://localhost:1313/publications/2023-master/</loc>
   </url><url>
-    <loc>http://localhost:1313/benjamin-georgette/publications/</loc>
+    <loc>http://localhost:1313/publications/</loc>
   </url><url>
-    <loc>http://localhost:1313/benjamin-georgette/tags/</loc>
+    <loc>http://localhost:1313/tags/</loc>
   </url><url>
-    <loc>http://localhost:1313/benjamin-georgette/publications/2026-cras/</loc>
+    <loc>http://localhost:1313/publications/2026-cras/</loc>
   </url>
 </urlset>

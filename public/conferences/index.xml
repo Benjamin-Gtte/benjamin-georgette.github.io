@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Benjamin GEORGETTE</title>
-    <link>http://localhost:1313/benjamin-georgette/conferences/</link>
+    <link>http://localhost:1313/conferences/</link>
     <description>Recent content on Benjamin GEORGETTE</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 01 Jul 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/benjamin-georgette/conferences/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/conferences/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>A Geometric Integrator Based on the Double Bracket Structure for Coupled Thermo-Elastodynamics</title>
-      <link>http://localhost:1313/benjamin-georgette/conferences/2026-wccm/</link>
+      <link>http://localhost:1313/conferences/2026-wccm/</link>
       <pubDate>Wed, 01 Jul 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/benjamin-georgette/conferences/2026-wccm/</guid>
+      <guid>http://localhost:1313/conferences/2026-wccm/</guid>
       <description></description>
     </item>
     <item>
       <title>Un intégrateur géométrique basé sur la Double Generator Boundary Augmented bracket structure pour la thermo-élastodynamique couplée.</title>
-      <link>http://localhost:1313/benjamin-georgette/conferences/2026-csma/</link>
+      <link>http://localhost:1313/conferences/2026-csma/</link>
       <pubDate>Tue, 19 May 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/benjamin-georgette/conferences/2026-csma/</guid>
+      <guid>http://localhost:1313/conferences/2026-csma/</guid>
       <description></description>
     </item>
   </channel>
